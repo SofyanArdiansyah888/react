@@ -1,21 +1,18 @@
-import { useTable, Column, useFilters } from 'react-table'
-import ITableProps from '../interfaces/ITableProps';
-import Person from '../models/Person'
+import ITableProps from "../interfaces/ITableProps";
+import { useTable, useFilters } from 'react-table'
+import Person from "../models/Person";
 
-
-
-export default function SimpleTable({ data, columns }: ITableProps) {
+export default function FilterTable({ columns, data }: ITableProps) {
     const {
         getTableProps,
         getTableBodyProps,
         headerGroups,
         rows,
-        prepareRow,
+        prepareRow
     } = useTable<Person>({
-        data,
-        columns
-    },
-        useFilters);
+        columns,
+        data
+    }, useFilters)
     return (
         <table {...getTableProps()} className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-900">

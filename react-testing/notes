@@ -1,0 +1,34 @@
+
+3  Type Of Test :
+- Unit Tests (Individiual building block such as class or a function or a component)
+- Integration Tests (Combination of unit tests and test unit test together)
+- End To End Tests (Focus for testing entire application, involved real ui, real database service, real backend service )
+
+TDD (Test Driven Development) means write test first before write code
+3 Process of TDD :
+ 1. Create tests that verify the functionality of specific feature
+ 2. Write software code that will run the tests successfully when re-executed 
+ 3. Refactor the code for optimization while ensuring the tests continue to pass
+
+ Jest Watch mode
+ a (All)
+ o (by test change and not commited to git)
+ f (by filename or regex)
+ t (by test name)
+
+ test.only('test name' => {})   ---> will test at that function only
+ test.skip ----> will skip test function
+
+ Group Test
+ describe('Group Name', () => {
+    test('Test 1',() => {});
+    test('Test 2',() => {});
+    test('Test 3',() => {});
+ })
+
+ Filename
+example.test.ts
+example.spec.ts
+__tests__/example-test.ts
+
+Code Coverage

@@ -10,6 +10,7 @@ const schema = yup
   })
   .required();
 type FormData = yup.InferType<typeof schema>;
+
 const SimpleForm = (): JSX.Element => {
   const { handleSubmit, control } = useForm<FormData>({
     mode: "onChange",
@@ -27,9 +28,6 @@ const SimpleForm = (): JSX.Element => {
           margin: "0 auto",
           display: "flex",
           alignItems: "center",
-          
-          
-          
         }}
       >
         <div>

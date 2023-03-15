@@ -1,4 +1,3 @@
-import { Buttons } from "./components/Buttons";
 import { SimpleForm } from "./components/Forms";
 
 function App() {
